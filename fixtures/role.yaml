@@ -1,0 +1,23 @@
+- model: auth.group
+  pk: 1
+  fields:
+    name: admin
+    
+- model: auth.group
+  pk: 2
+  fields:
+    name: develop
+    
+
+- model: account.role
+  pk: 1
+  fields:
+    desc: desc
+    role_desc: role_desc
+    name: 系统管理员
+- model: account.role
+  pk: 2
+  fields:
+    desc: desc
+    role_desc: role_desc
+    name: 开发

@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+# virtualenv
+djvenv/
+venv/
+
+#ignore
+.DS_Store
+.idea/
+.vscode/
+migrations/
+var/
+downloads/
+script/jcwf/*.zip
+celerybeat-schedule
+django_debug.log
+nohup.out
+

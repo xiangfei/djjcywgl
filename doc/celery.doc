@@ -1,0 +1,24 @@
+celery使用步骤
+
+在django app下建立tasks.py
+account应用下已有例子
+
+from celery import task  
+@task(name=’appname.tasks.func_name’)    #appname为当前app注册的名字  
+def func_name():  
+    print ‘测试成功’  
+
+在登录djngo后台admin/, 为periodic task 增加定时任务.
+
+启动程序
+python manage.py runserver  0.0.0.0:8000
+
+在新打开的终端执行命令,
+启动celery woker, 用来查看输入日志.
+python manage.py celery worker -l info  
+
+在另一个新打开的终端中执行命令, 
+启动心跳执行定时任务.
+python manage.py celery beat  
+如果任务顺利执行,结果将会显示在 woker 所在的终端里.
+
